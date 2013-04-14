@@ -1,23 +1,18 @@
-2-. The exporter runs with GET parameters here are all listed:
+This is a Havij Report converter to SQL format.
+
+Available Parameters (GET):
+-file: Havij html report file to be converted
+-to (optional): Converted file name
+-table(optional): SQL desired name
+-createTable (only inside php)
 
 -Generate an .sql file contaning all rows:
 1135.php?file=HAVIJ_REPORT.html&table=YOUR_SQL_TABLE_NAME&to=export.sql
 
-By default it will use havij column names, but if you have different column names in your db use this:
-
-
-1135.php?file=HAVIJ_REPORT.html&table=YOUR_SQL_TABLE_NAME&to=export.sql&columns=column1,column2,etc...
-(columns param can be used everywhere)
 
 -Show exported data directly:
 
 1135.php?file=HAVIJ_REPORT.html&table=YOUR_SQL_TABLE_NAME
 
--Disable All-in-one query:
-1135.php?file=HAVIJ_REPORT.html&table=YOUR_SQL_TABLE_NAME&to=export.sql&aio=false
-(file will be less lighter, can be used everywhere)
 
--Get results in php array to work it as i want:
-Edit 1135.php put $array_import to true.
-
-Instructions will be printed each time, so you don't need to come again to this thread, unless you want to see any news or say thankyou :) 
+$sql var contains the parsed data.
