@@ -3,7 +3,6 @@
 // INITIAL VARS
 $sql=array();
 $config=array(
-	'to'=>'report.sql',
 	'file'=>'report.html',
 	'table'=>"exportedTable",
 	'createTable'=>true,
@@ -144,6 +143,8 @@ if(isset($config['to'])){
 	$triki=fopen($config['to'],'w'); 
 	fwrite($triki, utf8_decode($parser['content']));
 	fclose($triki);
+}else{
+	echo $parser['content'];
 }
 
 ?>
