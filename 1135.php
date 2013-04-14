@@ -19,6 +19,10 @@ if(isset($_GET['table'])){
 if(isset($_GET['to'])){
 	$config['to']=$_GET['to'];
 }
+if(isset($_GET['createTable'])){
+	$config['createTable']=$_GET['createTable'];
+}
+
 
 
 
